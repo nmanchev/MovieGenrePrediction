@@ -1,8 +1,8 @@
 import pickle
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Activation
-from keras import optimizers
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation
+from tensorflow.keras import optimizers
 from sklearn.preprocessing import MultiLabelBinarizer
 from src.utils.eval_metrics import *
 import time
@@ -51,7 +51,7 @@ print("Training done!\n")
 import matplotlib.pyplot as plt
 
 # Plot training & validation accuracy values
-plt.plot(history.history['acc'])
+plt.plot(history.history['accuracy'])
 plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
